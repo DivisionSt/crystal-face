@@ -1,3 +1,23 @@
 <drawables>
 	<bitmap id="LauncherIcon" filename="launcher_icon.png" />
+    <bitmap id="xShipNew" filename="x-ship-new.png">
+    	<palette disableTransparency="false">
+			<color>090805</color>
+			<color>201817</color>
+			<color>4f2410</color>
+			<color>332c2b</color>
+			<color>49413f</color>
+			<color>743a16</color>
+			<color>584f4e</color>
+			<color>935021</color>
+			<color>655d5c</color>
+			<color>756d6a</color>
+			<color>87807c</color>
+			<color>a67c5f</color>
+			<color>d07d47</color>
+			<color>e48642</color>
+			<color>a9a39a</color>
+			<color>cccdc4</color>
+    	</palette>
+    </bitmap>
 </drawables>

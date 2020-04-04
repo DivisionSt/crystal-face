@@ -131,7 +131,6 @@ class CrystalView extends Ui.WatchFace {
 		mDrawables[:LeftGoalMeter] = View.findDrawableById("LeftGoalMeter");
 		mDrawables[:RightGoalMeter] = View.findDrawableById("RightGoalMeter");
 		mDrawables[:DataArea] = View.findDrawableById("DataArea");
-		mDrawables[:Indicators] = View.findDrawableById("Indicators");
 
 		// Use mTime instead.
 		// Cache reference to ThickThinTime, for use in low power mode. Saves nearly 5ms!
@@ -142,8 +141,6 @@ class CrystalView extends Ui.WatchFace {
 		// Use mDataFields instead.
 		//mDrawables[:DataFields] = View.findDrawableById("DataFields");
 		mDataFields = View.findDrawableById("DataFields");
-
-		mDrawables[:MoveBar] = View.findDrawableById("MoveBar");
 
 		setHideSeconds(App.getApp().getProperty("HideSeconds")); // Requires mTime, mDrawables[:MoveBar];
 	}
@@ -264,11 +261,7 @@ class CrystalView extends Ui.WatchFace {
 			mDrawables[:LeftGoalMeter].onSettingsChanged();	
 			mDrawables[:RightGoalMeter].onSettingsChanged();	
 
-			mDrawables[:MoveBar].onSettingsChanged();	
-
 			mDataFields.onSettingsChanged();	
-
-			mDrawables[:Indicators].onSettingsChanged();
 		}
 
 		// If watch does not support per-second updates, and watch is sleeping, do not show seconds immediately, as they will not 
@@ -479,6 +472,5 @@ class CrystalView extends Ui.WatchFace {
 		}
 
 		mTime.setHideSeconds(hideSeconds);
-		mDrawables[:MoveBar].setFullWidth(hideSeconds);
 	}
 }

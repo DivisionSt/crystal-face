@@ -1,21 +1,21 @@
 <resources>
 	<layout id="WatchFace">
-		<drawable class="Background" />
-
 		<drawable id="LeftGoalMeter" class="GoalMeter">
 			<param name="side">:left</param>
-			<param name="stroke">8</param>
+			<param name="stroke">3</param>
 			<param name="height">160</param>
 			<param name="separator">2</param>
 		</drawable>
 
 		<drawable id="RightGoalMeter" class="GoalMeter">
 			<param name="side">:right</param>
-			<param name="stroke">8</param>
+			<param name="stroke">3</param>
 			<param name="height">160</param>
 			<param name="separator">2</param>
 		</drawable>
-
+		
+		<drawable class="Background" />
+		
 		<drawable id="DataArea" class="DataArea">
 			<param name="locX">76</param>
 			<param name="width">88</param>
@@ -34,32 +34,15 @@
 			<param name="batteryWidth">28</param>
 		</drawable>
 
-		<drawable id="Date" class="DateLine">
-			<param name="y">73</param>
-		</drawable>
-
-		<drawable id="Indicators" class="Indicators">
-			<param name="locX">29</param>
-			<param name="locY">120</param>
-			<param name="spacingY">30</param>
-			<param name="batteryWidth">24</param>
-		</drawable>
-
 		<drawable id="Time" class="ThickThinTime">
 			<param name="secondsX">167</param>
 			<param name="secondsY">145</param>
 			<param name="secondsClipY">157</param>
 			<param name="secondsClipWidth">26</param>
 			<param name="secondsClipHeight">17</param>
+			<param name="separation">40</param>
 		</drawable>
 
-		<drawable id="MoveBar" class="MoveBar">
-			<param name="x">48</param>
-			<param name="y">164</param>
-			<param name="width">110</param>
-			<param name="height">9</param>
-			<param name="separator">3</param>
-		</drawable>
 		
 	</layout>
 	

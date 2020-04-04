@@ -8,9 +8,12 @@ class ThickThinTime extends Ui.Drawable {
 
 	// "y" parameter passed to drawText(), read from layout.xml.
 	private var mSecondsY;
+	
+	// separation between hours and minutes
+	private var mSeparation;
 
 	// Wide rectangle: time should be moved up slightly to centre within available space.
-	private var mAdjustY = 0;
+	private var mAdjustY = -40;
 
 	// Tight clipping rectangle for drawing seconds during partial update.
 	// "y" corresponds to top of glyph, which will be lower than "y" parameter of drawText().
@@ -36,6 +39,10 @@ class ThickThinTime extends Ui.Drawable {
 		if (params[:amPmOffset] != null) {
 			AM_PM_X_OFFSET = params[:amPmOffset];
 		}
+		
+		if (params[:separation] != null) {
+			mSeparation = params[:separation];
+		}
 
 		mSecondsY = params[:secondsY];
 
@@ -45,8 +52,9 @@ class ThickThinTime extends Ui.Drawable {
 		mSecondsClipRectHeight = params[:secondsClipHeight];
 
 		mHoursFont = Ui.loadResource(Rez.Fonts.HoursFont);
-		mMinutesFont = Ui.loadResource(Rez.Fonts.MinutesFont);
+		mMinutesFont = mHoursFont;
 		mSecondsFont = Ui.loadResource(Rez.Fonts.SecondsFont);
+		//mSecondsFont = Ui.loadResource(Rez.Fonts.SecondsFont);
 	}
 
 	function setHideSeconds(hideSeconds) {
@@ -79,7 +87,7 @@ class ThickThinTime extends Ui.Drawable {
 		// Draw hours.
 		dc.setColor(gHoursColour, Graphics.COLOR_TRANSPARENT);
 		dc.drawText(
-			x,
+			x - mSeparation / 2,
 			halfDCHeight,
 			mHoursFont,
 			hours,
@@ -90,7 +98,7 @@ class ThickThinTime extends Ui.Drawable {
 		// Draw minutes.
 		dc.setColor(gMinutesColour, Graphics.COLOR_TRANSPARENT);
 		dc.drawText(
-			x,
+			x + mSeparation / 2,
 			halfDCHeight,
 			mMinutesFont,
 			minutes,
@@ -147,7 +155,7 @@ class ThickThinTime extends Ui.Drawable {
 
 		dc.drawText(
 			mSecondsClipRectX + mSecondsClipXAdjust,
-			mSecondsY,
+			mSecondsY + mAdjustY,
 			mSecondsFont,
 			seconds,
 			Graphics.TEXT_JUSTIFY_LEFT

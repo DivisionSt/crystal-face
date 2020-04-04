@@ -3,6 +3,8 @@
 	<property id="AppVersion" type="string">2.4.3</property>
 
 	<property id="Theme" type="number">0</property>
+    <property id="BackgroundColor" type="number">0x000000</property>
+    <property id="ForegroundColor" type="number">0xFF0000</property>
 
 	<property id="HoursColourOverride" type="number">0</property>
 	<property id="MinutesColourOverride" type="number">0</property>
