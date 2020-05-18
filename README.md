@@ -1,5 +1,7 @@
-# Crystal
-A Garmin Connect IQ watch face.
+# starships face
+A Garmin Connect IQ watch face based on the fantastic Crystal face by warmsound. This one puts an iconic starship in the background.
+
+## Everything below here is from the original Crystal README.md
 
 ## Description
 **If you enjoy using Crystal, you can support my work with a small donation:**
