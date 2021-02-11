@@ -1,5 +1,7 @@
 <resources>
 	<layout id="WatchFace">
+		<drawable class="Background" />
+		
 		<drawable id="LeftGoalMeter" class="GoalMeter">
 			<param name="side">:left</param>
 			<param name="stroke">3</param>
@@ -13,9 +15,7 @@
 			<param name="height">160</param>
 			<param name="separator">2</param>
 		</drawable>
-		
-		<drawable class="Background" />
-		
+				
 		<drawable id="DataArea" class="DataArea">
 			<param name="locX">76</param>
 			<param name="width">88</param>
