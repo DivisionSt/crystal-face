@@ -130,7 +130,7 @@
 	</setting>
 
 	<setting propertyKey="@Properties.IndicatorCount" title="@Strings.IndicatorCountTitle">
-		<settingConfig type="numeric" min="0" max="3" required="true"/>
+		<settingConfig type="numeric" min="0" max="2" required="true"/>
 	</setting>
 
 	<setting propertyKey="@Properties.Indicator1Type" title="@Strings.Indicator1Title">
@@ -144,16 +144,6 @@
 	</setting>
 
 	<setting propertyKey="@Properties.Indicator2Type" title="@Strings.Indicator2Title">
-		<settingConfig type="list">
-			<listEntry value="0">@Strings.Bluetooth</listEntry>
-			<listEntry value="1">@Strings.Alarms</listEntry>
-			<listEntry value="2">@Strings.Notifications</listEntry>
-			<listEntry value="3">@Strings.BluetoothOrNotifications</listEntry>
-			<listEntry value="4">@Strings.Battery</listEntry>
-		</settingConfig>
-	</setting>
-
-	<setting propertyKey="@Properties.Indicator3Type" title="@Strings.Indicator3Title">
 		<settingConfig type="list">
 			<listEntry value="0">@Strings.Bluetooth</listEntry>
 			<listEntry value="1">@Strings.Alarms</listEntry>
